@@ -8,5 +8,12 @@
                 Initialized empty Git repository in D:/development_Yang/CS61A/.git/
                 YangZhaoqiang@DESKTOP-PT0FVKI MINGW64 /D/development_Yang/CS61A (master)
                 $
-        第二步：git add  
-        第三步：git commit
+        第二步：git add   eg：git add readme.txt
+        第三步：git commit   eg：git commit -m "wrote a readme file"
+
+    在github上创建一个同名仓库
+
+
+    git remote add origin git@github.com:michaelliao/learngit.git
+
+    git push -u origin master
