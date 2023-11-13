@@ -20,6 +20,4 @@
 
 
     如此便将本地的仓库推到GitHub上了，以后每次对仓库所做的修改只要重复进行git add    git commit 和
-    git remote add origin git@github.com:michaelliao/learngit.git
-
-    git push -u origin master即可          
+   git push origin master     
