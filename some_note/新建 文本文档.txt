@@ -1,0 +1,63 @@
+在Ubuntu环境中使用python
+
+yang@DESKTOP-PT0FVKI:~$ python3
+Python 3.10.12 (main, Jun 11 2023, 05:26:28) [GCC 11.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> exit()
+
+可见在wsl中配置了Ubuntu后已经下载了Python 3.10.12版本，但是还缺少Python的pip包和虚拟环境包。
+
+so    sudo apt-get install python3-pip
+
+
+ and then error
+	E: Package 'python3-pip' has no installation candidate
+
+
+solve:yang@DESKTOP-PT0FVKI:~$ sudo apt-get update
+	yang@DESKTOP-PT0FVKI:~$ sudo apt-get upgrade	
+	yang@DESKTOP-PT0FVKI:~$ sudo apt install python3-pip
+
+
+
+yang@DESKTOP-PT0FVKI:~$ sudo apt install python3.10-venv
+
+下载完venv的包后就可以创建虚拟环境（虚拟环境的作用在于在虚拟环境中下载的包，无法和其他虚拟包互通）了
+
+yang@DESKTOP-PT0FVKI:~$ python3 -m venv env
+yang@DESKTOP-PT0FVKI:~$ ls
+env  helloworld  snap
+yang@DESKTOP-PT0FVKI:~$ source env/bin/activate
+(env) yang@DESKTOP-PT0FVKI:~$
+
+以上创建了一个名字叫env的虚拟环境，并进入虚拟环境里，开头的（env）即代表进入了名字叫env的虚拟环境中
+
+
+下面我们在这个虚拟环境中下载一个叫做flask的包
+
+(env) yang@DESKTOP-PT0FVKI:~$ pip install flask
+
+done
+
+接下来进行一下虚拟环境作用的演示
+
+
+
+(env) yang@DESKTOP-PT0FVKI:~$ python    进入python
+Python 3.10.12 (main, Jun 11 2023, 05:26:28) [GCC 11.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import flask                  importflask后没有报错
+>>>
+>>> exit                          退出python
+Use exit() or Ctrl-D (i.e. EOF) to exit
+>>> exit()
+(env) yang@DESKTOP-PT0FVKI:~$ deactivate        退出虚拟环境
+yang@DESKTOP-PT0FVKI:~$ python3            
+Python 3.10.12 (main, Jun 11 2023, 05:26:28) [GCC 11.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import flask                     import flask后报错
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ModuleNotFoundError: No module named 'flask'
+
+

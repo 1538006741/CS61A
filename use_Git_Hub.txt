@@ -1,0 +1,12 @@
+    首先，我在本地创建一个文件夹CS61A作为我学习CS61A的一个仓库，这个仓库用来放置
+相关的资料和笔记。
+    创建完本地的仓库后，
+        第一步：git  init  ,在Git Bash中进入到仓库目录下D:\development_Yang\CS61A
+                
+                YangZhaoqiang@DESKTOP-PT0FVKI MINGW64 /D/development_Yang/CS61A
+                $ git init
+                Initialized empty Git repository in D:/development_Yang/CS61A/.git/
+                YangZhaoqiang@DESKTOP-PT0FVKI MINGW64 /D/development_Yang/CS61A (master)
+                $
+        第二步：git add  
+        第三步：git commit
