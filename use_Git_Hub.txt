@@ -1,3 +1,7 @@
+我的需求：将Github作为一个云网盘存储学习资料和笔记，同时保留一版在本地。
+   
+   
+   
     首先，我在本地创建一个文件夹CS61A作为我学习CS61A的一个仓库，这个仓库用来放置
 相关的资料和笔记。
     创建完本地的仓库后，
@@ -10,14 +14,20 @@
                 $
         第二步：git add   eg：git add readme.txt
         第三步：git commit   eg：git commit -m "wrote a readme file"
+                此处有两个概念需要理解：缓存区和工作区。我们创建的文件夹相当于工作区，而git init
+                后创建了一个版本库，用于进行版本库管理。而git add将工作区的文件放入缓存区，git commit
+                将缓存区的文件放入版本库内，只有放入版本库内的文件才能被Git所管理，也才能上传至Github
+        另外：git status 可以查看文件在工作区还是缓存区还是版本库内
 
-    在github上创建一个同名仓库
 
 
+    接着需要创建一个SSH KEY用于连接Github和本地，具体详见：https://www.liaoxuefeng.com/wiki/896043488029600#0
+
+
+
+    接下来在github上创建一个同名仓库
     git remote add origin git@github.com:michaelliao/learngit.git
-
     git push -u origin master
-
-
-    如此便将本地的仓库推到GitHub上了，以后每次对仓库所做的修改只要重复进行git add    git commit 和
-   git push origin master     
+    如此便将本地的仓库推到GitHub上了
+    以后每次对仓库所做的修改只要重复进行git add    git commit 和
+    git push origin master即可将变动更新到Github上     
