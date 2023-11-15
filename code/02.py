@@ -28,6 +28,9 @@ f(3, max)
 f = 2
 # f(3, 4)
 __builtins__.max
+'''
+可见甚至连内置函数的名字都可以被置换
+'''
 
 # User-defined functions
 from operator import add, mul
