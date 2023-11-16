@@ -91,7 +91,7 @@ def cube(k):
 def summation(n, term):
     """Sum the first N terms of a sequence.
 
-    >>> summation(5, cube)
+    >>> summation(5, cube)  这里说明函数的参数也可以是一个函数
     225
     """
     total, k = 0, 1
